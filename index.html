@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Untuk Alma ♡</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: Georgia, serif;
+    color: #633847;
+    background:
+        radial-gradient(circle at 20% 20%, #ffffff 0 4%, transparent 5%),
+        linear-gradient(135deg, #fff7fa, #ffd9e8);
+    overflow-x: hidden;
+}
+
+.container {
+    width: 100%;
+    max-width: 520px;
+    margin: auto;
+    padding: 30px 20px;
+}
+
+.card {
+    background: rgba(255,255,255,.72);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255,255,255,.9);
+    border-radius: 30px;
+    padding: 25px;
+    text-align: center;
+    box-shadow: 0 20px 60px rgba(120,50,80,.18);
+}
+
+.label {
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: #a05a78;
+}
+
+h1 {
+    font-size: 54px;
+    font-weight: normal;
+    margin: 12px 0 4px;
+}
+
+h2 {
+    font-size: 22px;
+    font-weight: normal;
+    margin-bottom: 22px;
+}
+
+.photo {
+    width: 100%;
+    border-radius: 24px;
+    display: block;
+    box-shadow: 0 12px 30px rgba(80,30,50,.18);
+}
+
+.message {
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    line-height: 1.8;
+    margin: 25px 5px;
+}
+
+button {
+    border: none;
+    background: #d96f98;
+    color: white;
+    padding: 14px 24px;
+    border-radius: 999px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 8px 20px rgba(217,111,152,.3);
+}
+
+.secret {
+    display: none;
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 20px;
+    background: #fff1f6;
+    font-family: Arial, sans-serif;
+    line-height: 1.8;
+}
+
+.music {
+    display: inline-block;
+    margin-top: 18px;
+    padding: 12px 20px;
+    border-radius: 999px;
+    background: #fff;
+    color: #b14d76;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    box-shadow: 0 5px 15px rgba(100,40,60,.12);
+}
+
+.footer {
+    margin-top: 22px;
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+    color: #a56a82;
+}
+
+.heart {
+    position: fixed;
+    color: #e89ab8;
+    opacity: .45;
+    pointer-events: none;
+    animation: fall linear infinite;
+}
+
+@keyframes fall {
+    from {
+        transform: translateY(-10vh) rotate(0deg);
+    }
+    to {
+        transform: translateY(110vh) rotate(360deg);
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="card">
+
+<div class="label">
+A little birthday page for
+</div>
+
+<h1>Alma ♡</h1>
+
+<h2>Happy Birthday, sayang.</h2>
+
+<img src="alma.jpg" class="photo" alt="Alma">
+
+<div class="message">
+
+Hari ini bukan cuma tentang bertambahnya umur kamu,
+tapi tentang bersyukur karena kamu masih terus berjalan,
+tumbuh, dan menjadi diri kamu sendiri.
+
+<br><br>
+
+Semoga di umur yang baru ini,
+Allah selalu jaga kamu, sehatkan kamu,
+mudahkan setiap langkahmu,
+dan mempertemukan kamu dengan lebih banyak hal baik.
+
+<br><br>
+
+Aku mungkin nggak selalu bisa ada di samping kamu,
+tapi semoga kamu tahu kalau ada seseorang
+yang selalu senang melihat kamu bahagia.
+
+</div>
+
+<button onclick="showMessage()">
+Ada satu pesan lagi ♡
+</button>
+
+<div class="secret" id="secret">
+
+Terima kasih sudah menjadi bagian dari cerita ini.
+
+<br><br>
+
+Semoga tahun ini lebih lembut buat kamu,
+lebih banyak senyum,
+dan lebih sedikit hal yang harus kamu tanggung sendirian.
+
+<br><br>
+
+<b>
+Keep smiling, Alma.
+You deserve beautiful days ahead. ♡
+</b>
+
+</div>
+
+<a class="music"
+href="https://www.youtube.com/results?search_query=Dewa+19+Aku+Milikmu"
+target="_blank">
+
+♫ Play a song for you
+
+</a>
+
+<div class="footer">
+made with a little love, just for you
+</div>
+
+</div>
+
+</div>
+
+<script>
+
+function showMessage() {
+
+    let message = document.getElementById("secret");
+
+    if (message.style.display === "block") {
+        message.style.display = "none";
+    } else {
+        message.style.display = "block";
+    }
+
+}
+
+for (let i = 0; i < 18; i++) {
+
+    let heart = document.createElement("div");
+
+    heart.className = "heart";
+
+    heart.innerHTML = "♡";
+
+    heart.style.left = Math.random() * 100 + "vw";
+
+    heart.style.fontSize =
+        (12 + Math.random() * 18) + "px";
+
+    heart.style.animationDuration =
+        (5 + Math.random() * 7) + "s";
+
+    heart.style.animationDelay =
+        (-Math.random() * 8) + "s";
+
+    document.body.appendChild(heart);
+}
+
+</script>
+
+</body>
+</html>
